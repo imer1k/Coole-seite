@@ -468,10 +468,6 @@ textarea {
   z-index: 2000;
 }
 
-.command-palette[hidden] {
-  display: none;
-}
-
 .palette-surface {
   background: var(--card);
   border-radius: var(--radius);
