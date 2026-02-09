@@ -1,242 +1,162 @@
 <!DOCTYPE html>
-<html lang="de" data-theme="light">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nebula Studio</title>
+  <title>Neon Chronik</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true">
+    <span class="aurora__layer"></span>
+    <span class="aurora__layer"></span>
+    <span class="aurora__layer"></span>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
 
-  <header class="site-header" id="top">
-    <nav class="navbar" aria-label="Primärnavigation">
-      <a class="logo" href="#top">Nebula<span>Studio</span></a>
-      <div class="nav-links" role="list">
-        <a href="#hero" class="nav-link">Hero</a>
-        <a href="#social" class="nav-link">Social Proof</a>
-        <a href="#features" class="nav-link">Features</a>
-        <a href="#gallery" class="nav-link">Gallery</a>
-        <a href="#pricing" class="nav-link">Pricing</a>
-        <a href="#faq" class="nav-link">FAQ</a>
-        <a href="#contact" class="nav-link">Contact</a>
+  <div class="scroll-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <span class="scroll-progress__bar"></span>
+  </div>
+
+  <div class="parallax">
+    <div class="parallax__layer parallax__layer--back" data-depth="0.12" aria-hidden="true"></div>
+    <div class="parallax__layer parallax__layer--mid" data-depth="0.2" aria-hidden="true"></div>
+    <div class="parallax__layer parallax__layer--front" data-depth="0.32" aria-hidden="true"></div>
+  </div>
+
+  <header class="hero" id="top">
+    <div class="hero__top">
+      <p class="eyebrow">Neon Chronik</p>
+      <button class="toggle" type="button" data-motion-toggle aria-pressed="false">
+        Reduce motion
+      </button>
+    </div>
+    <div class="hero__content">
+      <h1>Ein Zeitstrahl aus Licht, Nebel und Erinnerungen.</h1>
+      <p class="hero__lead">
+        Eine immersive Reise durch ein Jahrzehnt aus Projekten, Momenten und Meilensteinen – gestaltet wie eine
+        schwebende Galerie aus Glas und Aurora.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#y2016">Jump to first chapter</a>
+        <a class="btn btn--ghost" href="#y2025">Zum neuesten Kapitel</a>
       </div>
-      <div class="nav-actions">
-        <button class="toggle" data-toggle="theme" aria-pressed="false">Theme</button>
-        <button class="toggle" data-toggle="motion" aria-pressed="false">Reduce Motion</button>
-        <button class="command-trigger" data-command-open>⌘ Palette</button>
-      </div>
-    </nav>
+    </div>
+    <div class="hero__hint" aria-hidden="true">
+      <span>Scroll</span>
+      <span class="hero__line"></span>
+    </div>
   </header>
 
-  <main>
-    <section id="hero" class="section hero" data-section>
-      <canvas class="particle-canvas" aria-hidden="true"></canvas>
-      <div class="hero-content">
-        <p class="eyebrow">Nebula Launch</p>
-        <h1>Erzeuge kosmische Experiences in Minuten.</h1>
-        <p>Eine Single‑Page Plattform für Produktteams, die lebendige Interfaces, gläserne Navigationen und clevere Motion mögen.</p>
-        <div class="hero-actions">
-          <button class="btn btn-primary" data-magnetic>CTA starten</button>
-          <button class="btn btn-secondary" data-copy="https://nebula.studio">Copy Link</button>
-        </div>
-        <div class="hero-badges">
-          <span class="chip">Realtime Metrics</span>
-          <span class="chip">No-Code</span>
-          <span class="chip">Secure</span>
-        </div>
-      </div>
-      <div class="hero-card" data-tilt>
-        <h3>Launch Dashboard</h3>
-        <p>Live KPIs, Neon Charts, Aurora Glow.</p>
-        <button class="btn btn-ghost" data-toast="Dashboard geöffnet">Open</button>
-      </div>
+  <nav class="minimap" aria-label="Timeline minimap">
+    <a href="#y2016" data-link="y2016">2016</a>
+    <a href="#y2017" data-link="y2017">2017</a>
+    <a href="#y2018" data-link="y2018">2018</a>
+    <a href="#y2019" data-link="y2019">2019</a>
+    <a href="#y2020" data-link="y2020">2020</a>
+    <a href="#y2021" data-link="y2021">2021</a>
+    <a href="#y2022" data-link="y2022">2022</a>
+    <a href="#y2023" data-link="y2023">2023</a>
+    <a href="#y2024" data-link="y2024">2024</a>
+    <a href="#y2025" data-link="y2025">2025</a>
+  </nav>
+
+  <main class="timeline" aria-label="Zeitstrahl">
+    <section id="y2016" class="timeline__section" data-section>
+      <article class="timeline__card" data-reveal>
+        <p class="timeline__date">2016 · 12. Februar</p>
+        <h2>Der erste Prototyp glüht</h2>
+        <p>Ein kleines Studio, ein großes Whiteboard und der Entschluss, visuelle Geschichten neu zu erzählen.</p>
+        <p>Die Basis für unsere Neon-Ästhetik entsteht in einem einzigen, langen Wochenende.</p>
+      </article>
     </section>
 
-    <section id="social" class="section social" data-section>
-      <h2>Social Proof</h2>
-      <div class="social-grid">
-        <div class="stat-card" data-reveal>
-          <h3>4.9/5</h3>
-          <p>Product Hunt Score</p>
-        </div>
-        <div class="stat-card" data-reveal>
-          <h3>12k+</h3>
-          <p>Creator Teams</p>
-        </div>
-        <div class="stat-card" data-reveal>
-          <h3>98%</h3>
-          <p>Customer Happiness</p>
-        </div>
-      </div>
+    <section id="y2017" class="timeline__section" data-section>
+      <article class="timeline__card" data-reveal>
+        <p class="timeline__date">2017 · 08. Juni</p>
+        <h2>Glasflächen treffen auf Klang</h2>
+        <p>Wir verbinden UI-Design mit Soundscapes und machen Interfaces fühlbar.</p>
+        <p>Der erste öffentliche Showcase sorgt für neugierige Fragen und mutige Ideen.</p>
+      </article>
     </section>
 
-    <section id="features" class="section features" data-section>
-      <h2>Features</h2>
-      <div class="feature-grid">
-        <article class="feature-card" data-tilt data-reveal>
-          <h3>Neon UI Kits</h3>
-          <p>Komponenten, die wie eine Galaxie leuchten.</p>
-        </article>
-        <article class="feature-card" data-tilt data-reveal>
-          <h3>Smart Automations</h3>
-          <p>Vom Onboarding bis zu Payment in einem Flow.</p>
-        </article>
-        <article class="feature-card" data-tilt data-reveal>
-          <h3>Global Sync</h3>
-          <p>Verteile Content in Sekunden über dein Team.</p>
-        </article>
-      </div>
+    <section id="y2018" class="timeline__section" data-section>
+      <article class="timeline__card" data-reveal>
+        <p class="timeline__date">2018 · 21. Oktober</p>
+        <h2>Die Aurora wird zum System</h2>
+        <p>Aus Experimenten entsteht ein Designsystem: Farben, Typo und Motion werden skalierbar.</p>
+        <p>Unsere Timeline erhält erstmals ein durchgängiges Narrativ.</p>
+      </article>
     </section>
 
-    <section id="gallery" class="section gallery" data-section>
-      <div class="section-head">
-        <h2>Feature Gallery</h2>
-        <div class="chip-row" role="list">
-          <button class="chip active" data-filter="all">All</button>
-          <button class="chip" data-filter="ui">UI</button>
-          <button class="chip" data-filter="motion">Motion</button>
-          <button class="chip" data-filter="data">Data</button>
-        </div>
-      </div>
-      <div class="gallery-grid" data-gallery>
-        <div class="gallery-card" data-category="ui" data-reveal>
-          <h3>Glass Panels</h3>
-        </div>
-        <div class="gallery-card" data-category="motion" data-reveal>
-          <h3>Magnetic Hover</h3>
-        </div>
-        <div class="gallery-card" data-category="data" data-reveal>
-          <h3>Live Insights</h3>
-        </div>
-        <div class="gallery-card" data-category="ui" data-reveal>
-          <h3>Neon Forms</h3>
-        </div>
-        <div class="gallery-card" data-category="motion" data-reveal>
-          <h3>Reveal Animations</h3>
-        </div>
-        <div class="gallery-card" data-category="data" data-reveal>
-          <h3>Pricing Engine</h3>
-        </div>
-      </div>
+    <section id="y2019" class="timeline__section" data-section>
+      <article class="timeline__card" data-reveal>
+        <p class="timeline__date">2019 · 04. April</p>
+        <h2>Parallax in drei Ebenen</h2>
+        <p>Wir inszenieren Tiefe mit Hintergrundnebel, mittleren Layern und kristallklaren Cards.</p>
+        <p>Die Navigation wird zur Minimap und führt intuitiv durch die Geschichte.</p>
+      </article>
     </section>
 
-    <section id="pricing" class="section pricing" data-section>
-      <div class="section-head">
-        <h2>Pricing</h2>
-        <div class="pricing-switch" role="group" aria-label="Billing Toggle">
-          <span>Monatlich</span>
-          <button class="switch" data-pricing-switch aria-pressed="false">
-            <span class="switch-thumb"></span>
-          </button>
-          <span>Jährlich</span>
-        </div>
-      </div>
-      <div class="pricing-grid">
-        <article class="pricing-card" data-reveal>
-          <h3>Starter</h3>
-          <p class="price" data-month="19" data-year="190">19</p>
-          <ul>
-            <li>3 Projekte</li>
-            <li>Community Support</li>
-            <li>Basic Analytics</li>
-          </ul>
-          <button class="btn btn-primary" data-toast="Starter gewählt">Subscribe</button>
-        </article>
-        <article class="pricing-card featured" data-reveal>
-          <h3>Orbit</h3>
-          <p class="price" data-month="49" data-year="490">49</p>
-          <ul>
-            <li>Unbegrenzte Teams</li>
-            <li>Priority Support</li>
-            <li>AI Insights</li>
-          </ul>
-          <button class="btn btn-primary" data-toast="Orbit aktiviert">Subscribe</button>
-        </article>
-        <article class="pricing-card" data-reveal>
-          <h3>Galaxy</h3>
-          <p class="price" data-month="89" data-year="890">89</p>
-          <ul>
-            <li>Enterprise Security</li>
-            <li>Dedicated Manager</li>
-            <li>Custom Integrations</li>
-          </ul>
-          <button class="btn btn-primary" data-toast="Galaxy ausgewählt">Subscribe</button>
-        </article>
-      </div>
+    <section id="y2020" class="timeline__section" data-section>
+      <article class="timeline__card" data-reveal>
+        <p class="timeline__date">2020 · 18. September</p>
+        <h2>Remote, aber verbunden</h2>
+        <p>Das Studio verteilt sich über Städte – die Timeline wird unser gemeinsamer Anker.</p>
+        <p>Neue Kapitel entstehen in nächtlichen Sessions und geteilten Vision Boards.</p>
+      </article>
     </section>
 
-    <section id="faq" class="section faq" data-section>
-      <h2>FAQ</h2>
-      <div class="faq-list">
-        <div class="faq-item" data-faq>
-          <button class="faq-question" aria-expanded="false">Wie schnell kann ich starten?</button>
-          <div class="faq-answer" role="region">
-            <p>In weniger als 10 Minuten steht dein erstes Konzept bereit.</p>
-          </div>
-        </div>
-        <div class="faq-item" data-faq>
-          <button class="faq-question" aria-expanded="false">Welche Integrationen gibt es?</button>
-          <div class="faq-answer" role="region">
-            <p>Zapier, Slack, Notion und viele weitere Tools.</p>
-          </div>
-        </div>
-        <div class="faq-item" data-faq>
-          <button class="faq-question" aria-expanded="false">Kann ich das Theme anpassen?</button>
-          <div class="faq-answer" role="region">
-            <p>Natürlich, mit einem Klick zwischen Light und Dark wechseln.</p>
-          </div>
-        </div>
-      </div>
+    <section id="y2021" class="timeline__section" data-section>
+      <article class="timeline__card" data-reveal>
+        <p class="timeline__date">2021 · 03. März</p>
+        <h2>Interaktive Kapitel</h2>
+        <p>Mit Scroll-Progress und Reveal-Animationen wird jeder Abschnitt zu einem Moment.</p>
+        <p>Wir integrieren Motion, die Rücksicht auf Barrierefreiheit nimmt.</p>
+      </article>
     </section>
 
-    <section id="contact" class="section contact" data-section>
-      <h2>Contact</h2>
-      <form class="contact-form" novalidate>
-        <label>
-          Name
-          <input type="text" name="name" required />
-          <span class="error" aria-live="polite"></span>
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" required />
-          <span class="error" aria-live="polite"></span>
-        </label>
-        <label>
-          Nachricht
-          <textarea name="message" rows="4" required></textarea>
-          <span class="error" aria-live="polite"></span>
-        </label>
-        <button class="btn btn-primary" type="submit">Send</button>
-        <p class="form-success" role="status"></p>
-      </form>
+    <section id="y2022" class="timeline__section" data-section>
+      <article class="timeline__card" data-reveal>
+        <p class="timeline__date">2022 · 29. Juli</p>
+        <h2>Neon trifft Nachhaltigkeit</h2>
+        <p>Wir reduzieren Komplexität, optimieren Performance und lassen die Timeline atmen.</p>
+        <p>Die Experience bleibt leichtgewichtig und dennoch atmosphärisch.</p>
+      </article>
+    </section>
+
+    <section id="y2023" class="timeline__section" data-section>
+      <article class="timeline__card" data-reveal>
+        <p class="timeline__date">2023 · 15. November</p>
+        <h2>Neue Kapitel, neue Stimmen</h2>
+        <p>Gastautor:innen fügen Perspektiven hinzu, die Timeline wird zur kollaborativen Bühne.</p>
+        <p>Die Minimap wächst und zeigt erstmals ein ganzes Jahrzehnt.</p>
+      </article>
+    </section>
+
+    <section id="y2024" class="timeline__section" data-section>
+      <article class="timeline__card" data-reveal>
+        <p class="timeline__date">2024 · 27. Mai</p>
+        <h2>Die Chronik wird modular</h2>
+        <p>Dank klarer Komponenten lassen sich neue Stories in Minuten hinzufügen.</p>
+        <p>Glassmorphism und Neon-Akzente bilden die visuelle Signatur.</p>
+      </article>
+    </section>
+
+    <section id="y2025" class="timeline__section" data-section>
+      <article class="timeline__card" data-reveal>
+        <p class="timeline__date">2025 · 10. Januar</p>
+        <h2>Ein neues Kapitel beginnt</h2>
+        <p>Wir bündeln ein Jahrzehnt in einer lebendigen Erzählung – bereit für das nächste Abenteuer.</p>
+        <p>Der Zeitstrahl endet nicht, er leuchtet weiter.</p>
+      </article>
     </section>
   </main>
 
-  <footer class="footer" id="footer">
-    <div>
-      <h3>Nebula Studio</h3>
-      <p>Designing cosmic journeys.</p>
-    </div>
-    <button class="btn btn-ghost" data-toast="Danke für deinen Besuch!">Say Hi</button>
+  <footer class="footer">
+    <p>Neon Chronik · Eine Timeline aus Licht und Erinnerung.</p>
+    <a class="btn btn--ghost" href="#top">Back to top</a>
   </footer>
-
-  <div class="command-palette" role="dialog" aria-modal="true" aria-label="Command Palette" hidden>
-    <div class="palette-surface" data-command-surface>
-      <input type="text" placeholder="Suche oder springe..." aria-label="Befehl" data-command-input />
-      <ul class="palette-list" role="listbox" data-command-list>
-        <li role="option" tabindex="0">Hero</li>
-        <li role="option" tabindex="0">Features</li>
-        <li role="option" tabindex="0">Gallery</li>
-        <li role="option" tabindex="0">Pricing</li>
-        <li role="option" tabindex="0">FAQ</li>
-        <li role="option" tabindex="0">Contact</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="toast-container" aria-live="polite" aria-atomic="true"></div>
 
   <script src="js/app.js"></script>
 </body>
