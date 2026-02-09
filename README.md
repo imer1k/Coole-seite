@@ -1,26 +1,22 @@
-# Nebula Studio
+# Neon Chronik
 
-## Lokal starten
+## Start
 
 ```bash
-python -m http.server
+python -m http.server 8000
 ```
 
-Öffne anschließend `http://localhost:8000`.
+Danach `http://localhost:8000` im Browser öffnen.
 
 ## Features
 
-- Sticky Glassmorphism Navbar mit Scrollspy und Scroll-Progress-Bar
-- Command Palette (Ctrl+K) mit Fokus-Trap
-- Aurora/Nebula Hero mit Canvas-Particles
-- 3D-Tilt Cards, Magnetic Hover, Reveal Animationen
-- Pricing Switch mit animierten Preisen
-- Feature-Gallery Filter mit Chips
-- FAQ Accordion, Toast Notifications, Copy-to-Clipboard
-- Formular mit Inline-Validierung und Success State
-- Easter Egg: Tippmuster **NEBULA** für Confetti
+- Parallax-Engine mit drei Layern
+- Reveal-Animationen mit Blur → Sharp
+- Minimap-Navigation mit Scrollspy
+- Scroll-Progress-Bar
+- Reduce-Motion-Modus
 
-## Hinweise
+## Barrierefreiheit & Motion
 
-- Theme Toggle speichert die Auswahl in `localStorage`.
-- Reduce Motion respektiert `prefers-reduced-motion` und kann überschrieben werden.
+Die Timeline respektiert `prefers-reduced-motion`. Über den Toggle im Header kann die Motion zusätzlich manuell
+überschrieben werden; die Einstellung wird in `localStorage` gespeichert.
